@@ -106,13 +106,13 @@ namespace OrderManagement
                     switch (doughPizza)
                     {
                         case "Normale":
-                            switch (extras.Length)
+                            switch (extrasi.Length)
                             {
                                 case 0:
                                     output = new Margherita();
                                     break;
                                 case 1:
-                                    output = HandleSingleExtra(extras[0], new Margherita());
+                                    output = HandleSingleExtra(extrasi[0], new Margherita());
                                     break;
                                 default:
                                     output = HandleMultipleExtras(extrasi, new Margherita());
@@ -120,13 +120,13 @@ namespace OrderManagement
                             }
                             break;
                         case "Integrale":
-                            switch (extras.Length)
+                            switch (extrasi.Length)
                             {
                                 case 0:
                                     output = new IntegralDecorator(new Margherita());
                                     break;
                                 case 1:
-                                   output = HandleSingleExtra(extras[0], new IntegralDecorator(new Margherita()));
+                                   output = HandleSingleExtra(extrasi[0], new IntegralDecorator(new Margherita()));
                                     break;
                                 default:
                                     output = HandleMultipleExtras(extrasi, new IntegralDecorator(new Margherita()));
